@@ -25,4 +25,8 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<<<<<<< HEAD
 >>>>>>> 83db34d (partially done)
+=======
+# crypto
+>>>>>>> 5bd54d8 (first commit)
