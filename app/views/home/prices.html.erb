@@ -1,1 +1,36 @@
-<h1>Prices Page!</h1>
+
+
+
+
+
+<%if @symbol %>
+  <% if @quote["Response"] %>
+    <h2>That Symbol <%= @symbol %> Doesn't Exist. Please Try Again...</h2>
+  <% else %>
+    <% @quote["DISPLAY"].each do |key, value| %>
+    <div class="d-flex justify-content-center">
+      <div class="card mb-3" style="width: 48%;">
+        <img src="https://png.pngitem.com/pimgs/s/201-2019567_cryptocurrency-transparent-cryptocurrency-png-png-download.png" class="card-img-left" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= key %></h5>
+          <p class="card-text"><br/>Symbol<%= value["USD"]["FROMSYMBOL"] %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Market Cap:<%= value["USD"]["PRICE"] %><br/></li>
+          <li class="list-group-item">24h High:<%= value["USD"]["HIGHDAY"] %><br/></li>
+          <li class="list-group-item">24h Low:<%= value["USD"]["LOWDAY"] %><br/></li>
+          <li class="list-group-item">Market Cap:<%= value["USD"]["MKTCAP"] %><br/></li>
+          <li class="list-group-item">Market :<%= value["USD"]["MARKET"] %><br/></li>
+          <li class="list-group-item">Last Update:<%= value["USD"]["LASTUPDATE"] %><br/></li>
+        </ul>
+
+      </div>
+    </div>
+    <% end %>
+<% end %>
+
+<% else %>
+  <h2> Please enter a crypto symbol from above...</h2>
+<% end %>
+
+

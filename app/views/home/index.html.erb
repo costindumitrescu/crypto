@@ -2,6 +2,36 @@
 
 <br/><br/>
 
+<table class="table table-sm table-striped table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr class="table-dark">
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">24h High</th>
+      <th scope="col">24h Low</th>
+      <th scope="col">Market Cap</th>
+    </tr>
+    <% @prices["DISPLAY"].each do |key, value| %>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="table-warning"><%= key %></td>
+      <td class="table-danger"><%= value["USD"]["PRICE"] %></td>
+      <td class="table-success"><%= value["USD"]["HIGHDAY"] %></td>
+      <td class="table-info"> <%= value["USD"]["LOWDAY"] %></td>
+      <td class="table-danger"><%= value["USD"]["MKTCAP"] %></td>
+    </tr>
+
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+
+<br/><br/>
+
 <% @news["Data"] %>
 
 
