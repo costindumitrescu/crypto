@@ -2,5 +2,22 @@
 @import "bootstrap";
 
 
+.navbar-brand {
+  margin-right: 800px;
+  font-family: "Chalkduster", fantasy;
+  font-size: 28px;
+  color: #e8505b;
+}
 
+h1{
+  font-family: copperplate, fantasy;
+  font-size: 52px;
+  display: flex;
+  justify-content: center;
+  color: #f3ecc2;
+  margin-top: 3rem;
+}
 
+body {
+   background-image: linear-gradient(to bottom right, #a9294f, #944e6c);
+}

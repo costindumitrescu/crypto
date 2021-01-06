@@ -5,11 +5,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <%= link_to "Crypto Market News", root_path, class: 'navbar-brand' %>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <%= link_to "Get Prices", home_prices_path, class: 'nav-link' %>
-        </li>
-      </ul>
       <%= form_tag home_prices_path, :method =>'POST', class:"d-flex" do%>
       <%= text_field_tag 'sym', nil, placeholder: "Enter Crypto Symbol", class: "form-control mr-sm-2" %>
       <%= submit_tag 'Lookup', class: "btn btn-outline-success" %>
