@@ -35,13 +35,13 @@
 <% @news["Data"] %>
 
 
-<div class="container">
+<div class="container-fluid content-row">
   <div class="row">
     <% for x in @news["Data"] %>
-      <div class="col-sm">
+      <div class="col-sm-6 col-lg-3 mb-4">
 
-        <div class="card" style="width: 18rem;">
-          <img src="<%= x["imageurl"] %>" class="card-img-top" alt="<%= x["source"] %>">
+        <div class="card card h-100">
+          <img src="<%= x["imageurl"] %>" class="card-img-top img-fluid" alt="<%= x["source"] %>">
           <div class="card-body">
             <h5 class="card-title"><%= x["title"] %></h5>
             <p class="card-text"><%= x["body"] %></p>

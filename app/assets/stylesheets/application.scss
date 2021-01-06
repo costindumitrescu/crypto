@@ -21,3 +21,9 @@ h1{
 body {
    background-image: linear-gradient(to bottom right, #a9294f, #944e6c);
 }
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
